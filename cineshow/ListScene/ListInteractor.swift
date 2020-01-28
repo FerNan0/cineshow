@@ -20,7 +20,7 @@ class ListInteractor: NSObject {
 }
 
 extension ListInteractor: CallbackResponse {
-    func response(fromConnector response: String!) -> UnsafeMutableRawPointer! {
-        return nil
+    func response(fromConnector response: String!) {
+        
     }
 }

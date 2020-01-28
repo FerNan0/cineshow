@@ -10,13 +10,13 @@
 
 @protocol CallbackResponse <NSObject>
 
-- (void *) responseFromConnector:(NSString *)response;
+- (void) responseFromConnector:(NSString *)response;
 
 @end
 
 @interface Connector : NSObject
 
-- (void *) getDataFrom:(NSString *)url;
+- (void) getDataFrom:(NSString *)url;
 @property (nonatomic, weak) id <CallbackResponse> delegate;
 
 @end

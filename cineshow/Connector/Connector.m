@@ -10,7 +10,7 @@
 
 @implementation Connector
 
-- (void *) getDataFrom:(NSString *)url {
+- (void) getDataFrom:(NSString *)url {
     
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
         [request setHTTPMethod:@"GET"];
@@ -25,8 +25,6 @@
             NSLog(@"Data received: %@", myString);
             [self.delegate responseFromConnector:myString];
         }] resume];
-    
-    return nil;
 }
 
 @end
