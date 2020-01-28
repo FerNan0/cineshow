@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+class ListPresenter: NSObject {
+    var viewController: ListViewController!
+}

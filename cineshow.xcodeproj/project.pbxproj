@@ -22,6 +22,7 @@
 		ED1B455523DF9FC100C0D5EF /* Navigation.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1B455423DF9FC100C0D5EF /* Navigation.xib */; };
 		ED1B455723DF9FCE00C0D5EF /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1B455623DF9FCE00C0D5EF /* Navigation.swift */; };
 		ED1B455923DFB24F00C0D5EF /* List.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1B455823DFB24F00C0D5EF /* List.xib */; };
+		ED1B455D23DFBCA500C0D5EF /* Connector.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1B455C23DFBCA500C0D5EF /* Connector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,9 @@
 		ED1B455423DF9FC100C0D5EF /* Navigation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Navigation.xib; sourceTree = "<group>"; };
 		ED1B455623DF9FCE00C0D5EF /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		ED1B455823DFB24F00C0D5EF /* List.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = List.xib; sourceTree = "<group>"; };
+		ED1B455A23DFBC8F00C0D5EF /* Connector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Connector.h; sourceTree = "<group>"; };
+		ED1B455B23DFBCA500C0D5EF /* cineshow-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cineshow-Bridging-Header.h"; sourceTree = "<group>"; };
+		ED1B455C23DFBCA500C0D5EF /* Connector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Connector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,9 @@
 		ED1B454923DF9E9100C0D5EF /* Connector */ = {
 			isa = PBXGroup;
 			children = (
+				ED1B455A23DFBC8F00C0D5EF /* Connector.h */,
+				ED1B455C23DFBCA500C0D5EF /* Connector.m */,
+				ED1B455B23DFBCA500C0D5EF /* cineshow-Bridging-Header.h */,
 			);
 			path = Connector;
 			sourceTree = "<group>";
@@ -205,6 +212,7 @@
 				TargetAttributes = {
 					ED1B451723DF98C600C0D5EF = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					ED1B453023DF98CC00C0D5EF = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -259,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED1B452623DF98C600C0D5EF /* cineshow.xcdatamodeld in Sources */,
+				ED1B455D23DFBCA500C0D5EF /* Connector.m in Sources */,
 				ED1B451C23DF98C600C0D5EF /* AppDelegate.swift in Sources */,
 				ED1B455723DF9FCE00C0D5EF /* Navigation.swift in Sources */,
 				ED1B455223DF9F2200C0D5EF /* DetailPresenter.swift in Sources */,
@@ -418,7 +427,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RRQ94VJUQQ;
 				INFOPLIST_FILE = cineshow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -426,6 +437,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fernando.cineshow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "cineshow/Connector/cineshow-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -435,7 +448,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RRQ94VJUQQ;
 				INFOPLIST_FILE = cineshow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -443,6 +458,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fernando.cineshow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "cineshow/Connector/cineshow-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
