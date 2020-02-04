@@ -5,7 +5,7 @@
 //  Created by Fernando Duarte on 27/01/20.
 //  Copyright © 2020 Fernando Duarte. All rights reserved.
 //
-//http://www.omdbapi.com/?s=Bat&apikey=2f406f7f
+
 import Foundation
 
 class ListInteractor: NSObject {
@@ -19,8 +19,14 @@ class ListInteractor: NSObject {
     }
 }
 
-extension ListInteractor: CallbackResponse {
-    func response(fromConnector response: String!) {
-        
+extension ListInteractor: CallbackResponse {    
+    func response(fromConnector response: Data!) {
+        print(response ?? "")
+        do{
+            let response = try JSONDecoder().decode(Response.self, from: response)
+            self.presenter.showData(movies: response.search!)            
+        }catch {
+            print(error)
+        }
     }
 }

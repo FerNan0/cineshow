@@ -8,6 +8,17 @@
 
 import Foundation
 
+protocol PresenterProtocol {
+    func showData(movies:[Movie])
+}
+
 class ListPresenter: NSObject {
     var viewController: ListViewController!
+}
+
+extension ListPresenter: PresenterProtocol {
+    func showData(movies: [Movie]) {
+        viewController.showData(movies: movies)
+    }
+    
 }

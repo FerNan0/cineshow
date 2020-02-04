@@ -10,7 +10,7 @@
 
 @protocol CallbackResponse <NSObject>
 
-- (void) responseFromConnector:(NSString *)response;
+- (void) responseFromConnector:(NSData *)response;
 
 @end
 

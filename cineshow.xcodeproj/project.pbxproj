@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED0D4F9A23E8E36100D8DCA4 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0D4F9923E8E36100D8DCA4 /* MovieModel.swift */; };
+		ED0D4F9E23E8FCAF00D8DCA4 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0D4F9D23E8FCAF00D8DCA4 /* ListCell.swift */; };
+		ED0D4FA023E8FCBC00D8DCA4 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED0D4F9F23E8FCBC00D8DCA4 /* ListCell.xib */; };
+		ED1262A023E068FE00E9AEE7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED12629F23E068FE00E9AEE7 /* Models.swift */; };
 		ED1B451C23DF98C600C0D5EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1B451B23DF98C600C0D5EF /* AppDelegate.swift */; };
 		ED1B452623DF98C600C0D5EF /* cineshow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED1B452423DF98C600C0D5EF /* cineshow.xcdatamodeld */; };
 		ED1B452823DF98CC00C0D5EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED1B452723DF98CC00C0D5EF /* Assets.xcassets */; };
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED0D4F9923E8E36100D8DCA4 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		ED0D4F9D23E8FCAF00D8DCA4 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		ED0D4F9F23E8FCBC00D8DCA4 /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
+		ED12629F23E068FE00E9AEE7 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		ED1B451823DF98C600C0D5EF /* cineshow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cineshow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1B451B23DF98C600C0D5EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED1B452523DF98C600C0D5EF /* cineshow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = cineshow.xcdatamodel; sourceTree = "<group>"; };
@@ -78,6 +86,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED0D4F9823E8E35300D8DCA4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED0D4F9923E8E36100D8DCA4 /* MovieModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ED0D4F9C23E8FA4C00D8DCA4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				ED0D4F9D23E8FCAF00D8DCA4 /* ListCell.swift */,
+				ED0D4F9F23E8FCBC00D8DCA4 /* ListCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		ED12629E23E068DF00E9AEE7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED12629F23E068FE00E9AEE7 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		ED1B450F23DF98C600C0D5EF = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +132,12 @@
 		ED1B451A23DF98C600C0D5EF /* cineshow */ = {
 			isa = PBXGroup;
 			children = (
+				ED0D4F9823E8E35300D8DCA4 /* Model */,
 				ED1B455323DF9F8700C0D5EF /* Navigation */,
 				ED1B454923DF9E9100C0D5EF /* Connector */,
 				ED1B454A23DF9ECB00C0D5EF /* DetailScene */,
 				ED1B454023DF9C4200C0D5EF /* ListScene */,
+				ED12629E23E068DF00E9AEE7 /* Models */,
 				ED1B451B23DF98C600C0D5EF /* AppDelegate.swift */,
 				ED1B452723DF98CC00C0D5EF /* Assets.xcassets */,
 				ED1B452923DF98CC00C0D5EF /* LaunchScreen.storyboard */,
@@ -124,6 +159,7 @@
 		ED1B454023DF9C4200C0D5EF /* ListScene */ = {
 			isa = PBXGroup;
 			children = (
+				ED0D4F9C23E8FA4C00D8DCA4 /* Cell */,
 				ED1B455823DFB24F00C0D5EF /* List.xib */,
 				ED1B454323DF9E6100C0D5EF /* ListViewController.swift */,
 				ED1B454523DF9E7500C0D5EF /* ListInteractor.swift */,
@@ -135,9 +171,9 @@
 		ED1B454923DF9E9100C0D5EF /* Connector */ = {
 			isa = PBXGroup;
 			children = (
+				ED1B455B23DFBCA500C0D5EF /* cineshow-Bridging-Header.h */,
 				ED1B455A23DFBC8F00C0D5EF /* Connector.h */,
 				ED1B455C23DFBCA500C0D5EF /* Connector.m */,
-				ED1B455B23DFBCA500C0D5EF /* cineshow-Bridging-Header.h */,
 			);
 			path = Connector;
 			sourceTree = "<group>";
@@ -245,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED1B452B23DF98CC00C0D5EF /* LaunchScreen.storyboard in Resources */,
+				ED0D4FA023E8FCBC00D8DCA4 /* ListCell.xib in Resources */,
 				ED1B455923DFB24F00C0D5EF /* List.xib in Resources */,
 				ED1B454C23DF9EE500C0D5EF /* Detail.xib in Resources */,
 				ED1B452823DF98CC00C0D5EF /* Assets.xcassets in Resources */,
@@ -266,9 +303,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED0D4F9A23E8E36100D8DCA4 /* MovieModel.swift in Sources */,
+				ED1262A023E068FE00E9AEE7 /* Models.swift in Sources */,
 				ED1B452623DF98C600C0D5EF /* cineshow.xcdatamodeld in Sources */,
 				ED1B455D23DFBCA500C0D5EF /* Connector.m in Sources */,
 				ED1B451C23DF98C600C0D5EF /* AppDelegate.swift in Sources */,
+				ED0D4F9E23E8FCAF00D8DCA4 /* ListCell.swift in Sources */,
 				ED1B455723DF9FCE00C0D5EF /* Navigation.swift in Sources */,
 				ED1B455223DF9F2200C0D5EF /* DetailPresenter.swift in Sources */,
 				ED1B455023DF9F1000C0D5EF /* DetailInteractor.swift in Sources */,
