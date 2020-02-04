@@ -97,6 +97,13 @@ extension ListViewController: UITextFieldDelegate {
         
         return true
     }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if(textField.text?.count == 1 && string == "") {
+            self.loadFavorites()
+        }
+        
+        return true
+    }
 }
 
 extension ListViewController: ListPresenterProtocol {
