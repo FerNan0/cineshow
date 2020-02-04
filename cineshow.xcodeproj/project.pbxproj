@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		139FC9E108CF96FE4BAA9EC1 /* Pods_cineshowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F41C5F31E9F0B75361080A2 /* Pods_cineshowTests.framework */; };
+		2A8A235AA3A98F8DCED7D8AE /* Pods_cineshow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CACF5DDA2818CA0980D57A /* Pods_cineshow.framework */; };
 		ED0D4F9A23E8E36100D8DCA4 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0D4F9923E8E36100D8DCA4 /* MovieModel.swift */; };
 		ED0D4F9E23E8FCAF00D8DCA4 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0D4F9D23E8FCAF00D8DCA4 /* ListCell.swift */; };
 		ED0D4FA023E8FCBC00D8DCA4 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED0D4F9F23E8FCBC00D8DCA4 /* ListCell.xib */; };
@@ -40,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1EDF23830D8FE95647CBA225 /* Pods-cineshow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cineshow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cineshow/Pods-cineshow.debug.xcconfig"; sourceTree = "<group>"; };
+		1F41C5F31E9F0B75361080A2 /* Pods_cineshowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cineshowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		226E6C3D252BCE428CC567F9 /* Pods-cineshowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cineshowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cineshowTests/Pods-cineshowTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C5CACF5DDA2818CA0980D57A /* Pods_cineshow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cineshow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED0D4F9923E8E36100D8DCA4 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		ED0D4F9D23E8FCAF00D8DCA4 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		ED0D4F9F23E8FCBC00D8DCA4 /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
@@ -66,6 +72,8 @@
 		ED1B455A23DFBC8F00C0D5EF /* Connector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Connector.h; sourceTree = "<group>"; };
 		ED1B455B23DFBCA500C0D5EF /* cineshow-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cineshow-Bridging-Header.h"; sourceTree = "<group>"; };
 		ED1B455C23DFBCA500C0D5EF /* Connector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Connector.m; sourceTree = "<group>"; };
+		F8D9DB26208E345BBBA2A593 /* Pods-cineshow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cineshow.release.xcconfig"; path = "Pods/Target Support Files/Pods-cineshow/Pods-cineshow.release.xcconfig"; sourceTree = "<group>"; };
+		FEE31C559140B61C9EB84ADF /* Pods-cineshowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cineshowTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-cineshowTests/Pods-cineshowTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A8A235AA3A98F8DCED7D8AE /* Pods_cineshow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +89,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				139FC9E108CF96FE4BAA9EC1 /* Pods_cineshowTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EDB9FC6344887077B2D3B0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1EDF23830D8FE95647CBA225 /* Pods-cineshow.debug.xcconfig */,
+				F8D9DB26208E345BBBA2A593 /* Pods-cineshow.release.xcconfig */,
+				226E6C3D252BCE428CC567F9 /* Pods-cineshowTests.debug.xcconfig */,
+				FEE31C559140B61C9EB84ADF /* Pods-cineshowTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6698604727820F52645F41B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5CACF5DDA2818CA0980D57A /* Pods_cineshow.framework */,
+				1F41C5F31E9F0B75361080A2 /* Pods_cineshowTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ED0D4F9823E8E35300D8DCA4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +147,8 @@
 				ED1B451A23DF98C600C0D5EF /* cineshow */,
 				ED1B453423DF98CC00C0D5EF /* cineshowTests */,
 				ED1B451923DF98C600C0D5EF /* Products */,
+				0EDB9FC6344887077B2D3B0D /* Pods */,
+				6698604727820F52645F41B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,9 +237,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED1B453A23DF98CC00C0D5EF /* Build configuration list for PBXNativeTarget "cineshow" */;
 			buildPhases = (
+				569BFB3D7249C27F5BD7BA2F /* [CP] Check Pods Manifest.lock */,
 				ED1B451423DF98C600C0D5EF /* Sources */,
 				ED1B451523DF98C600C0D5EF /* Frameworks */,
 				ED1B451623DF98C600C0D5EF /* Resources */,
+				EBFC57C43899D75DAA793448 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,6 +256,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED1B453D23DF98CC00C0D5EF /* Build configuration list for PBXNativeTarget "cineshowTests" */;
 			buildPhases = (
+				5EBED3BB337E2B3249BBF9F0 /* [CP] Check Pods Manifest.lock */,
 				ED1B452D23DF98CC00C0D5EF /* Sources */,
 				ED1B452E23DF98CC00C0D5EF /* Frameworks */,
 				ED1B452F23DF98CC00C0D5EF /* Resources */,
@@ -297,6 +332,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		569BFB3D7249C27F5BD7BA2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cineshow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EBED3BB337E2B3249BBF9F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cineshowTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBFC57C43899D75DAA793448 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-cineshow/Pods-cineshow-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cineshow/Pods-cineshow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ED1B451423DF98C600C0D5EF /* Sources */ = {
@@ -465,6 +569,7 @@
 		};
 		ED1B453B23DF98CC00C0D5EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EDF23830D8FE95647CBA225 /* Pods-cineshow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -486,6 +591,7 @@
 		};
 		ED1B453C23DF98CC00C0D5EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8D9DB26208E345BBBA2A593 /* Pods-cineshow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -506,6 +612,7 @@
 		};
 		ED1B453E23DF98CC00C0D5EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 226E6C3D252BCE428CC567F9 /* Pods-cineshowTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -527,6 +634,7 @@
 		};
 		ED1B453F23DF98CC00C0D5EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEE31C559140B61C9EB84ADF /* Pods-cineshowTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

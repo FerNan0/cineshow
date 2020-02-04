@@ -7,11 +7,11 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ListCell: UITableViewCell {
     @IBOutlet weak var imgView: UIImageView! {
-        didSet {
-            self.imgView.backgroundColor = .red
+        didSet {            
         }
     }
     @IBOutlet weak var lblName: UILabel! {
@@ -25,8 +25,9 @@ class ListCell: UITableViewCell {
        }
     }
     
-    func configure(image: UIImage, name: String, year: String) {
+    func configure(image: String, name: String, year: String) {
         lblName.text = "Title: \(name)"
         lblYear.text = "First Run: \(year)"
+        imgView.sd_setImage(with: URL(string: image), placeholderImage: UIImage(named: "placeholder.png"))
     }
 }

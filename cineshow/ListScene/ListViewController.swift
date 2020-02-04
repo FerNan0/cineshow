@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ListViewController: UIViewController {
     
@@ -19,23 +20,48 @@ class ListViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.adjustTbvHeader()
         self.setUI()
+        self.loadFavorites()
         let presenter = ListPresenter()
         presenter.viewController = self
         interactor.presenter = presenter
     }
     
+    func loadFavorites() {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "MovieDB")
+        //request.predicate = NSPredicate(format: "age = %@", "12")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                var movieHelper = Movie()
+                movieHelper.title = data.value(forKey: "title") as? String
+                movieHelper.type = data.value(forKey: "type") as? String
+                movieHelper.imdbID = data.value(forKey: "imdbID") as? String
+                movieHelper.poster = data.value(forKey: "poster") as? String
+                movieHelper.year = data.value(forKey: "year") as? String
+                movies.append(movieHelper)
+          }
+            
+        } catch {
+            
+            print("Failed")
+        }
+        listTbv.reloadData()
+    }
     func setUI() {
         listTbv.register(UINib(nibName: "ListCell", bundle: nil), forCellReuseIdentifier: "listCell")
+        listTbv.register(UINib(nibName: "Detail", bundle: nil), forCellReuseIdentifier: "detail")
         self.title = "List screen"
         listTbv.delegate = self
         listTbv.dataSource = self
         listTbv.tableFooterView = UIView()
-        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
-        view.addGestureRecognizer(tapGesture)
+        listTbv.allowsSelection = true
     }
     
     func adjustTbvHeader() {
-        let headerView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.width, height: 80.0))
+        let headerView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.width, height: 100.0))
         let textField =  UITextField(frame: CGRect(x: 20, y: 40, width: self.view.frame.width - 40, height: 40))
         textField.placeholder = "Type a movie"
         textField.font = UIFont.systemFont(ofSize: 15)
@@ -62,7 +88,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = listTbv.dequeueReusableCell(withIdentifier: "listCell") as? ListCell {
-            cell.configure(image: UIImage(), name: movies[indexPath.row].title ?? "", year: movies[indexPath.row].year ?? "")
+            cell.configure(image: movies[indexPath.row].poster ?? "", name: movies[indexPath.row].title ?? "", year: movies[indexPath.row].year ?? "")
             cell.selectionStyle = .none
             return cell
         }
@@ -75,6 +101,12 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DetailViewController(nibName: "Detail", bundle: nil) as DetailViewController
+        vc.movie = movies[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

@@ -39,7 +39,11 @@ struct Movie: Codable {
         type = try values.decode(String.self, forKey: .Type)
         title = try values.decode(String.self, forKey: .Title)
         imdbID = try values.decode(String.self, forKey: .imdbID)
-        imdbID = try values.decode(String.self, forKey: .Poster)
+        poster = try values.decode(String.self, forKey: .Poster)
+    }
+    
+    public init() {
+        
     }
     
     enum CodingMovieKeys: String, CodingKey {
