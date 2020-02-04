@@ -31,7 +31,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Prs-OJ-JgC">
-                    <rect key="frame" x="67" y="452" width="280" height="21"/>
+                    <rect key="frame" x="67" y="411" width="280" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="280" id="7bv-1e-TxQ"/>
                     </constraints>
@@ -40,7 +40,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysR-fS-XRD">
-                    <rect key="frame" x="67" y="498" width="280" height="21"/>
+                    <rect key="frame" x="67" y="457" width="280" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="280" id="e3G-PC-MnH"/>
                     </constraints>
@@ -49,7 +49,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sm-O3-rA7">
-                    <rect key="frame" x="67" y="544" width="280" height="21"/>
+                    <rect key="frame" x="67" y="503" width="280" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="280" id="OP1-O8-9zP"/>
                     </constraints>
@@ -83,7 +83,7 @@
                 <constraint firstItem="Bn2-8p-eee" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="67" id="hdY-GD-Da5"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Bn2-8p-eee" secondAttribute="bottom" constant="20" id="pZy-Oz-4Kq"/>
                 <constraint firstItem="fdp-pJ-efg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="47" id="s93-bh-4ye"/>
-                <constraint firstItem="Prs-OJ-JgC" firstAttribute="top" secondItem="fdp-pJ-efg" secondAttribute="bottom" constant="81" id="vd5-oK-kbk"/>
+                <constraint firstItem="Prs-OJ-JgC" firstAttribute="top" secondItem="fdp-pJ-efg" secondAttribute="bottom" constant="40" id="vd5-oK-kbk"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>

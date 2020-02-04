@@ -13,6 +13,7 @@
 - (void ) getDataFrom:(NSString *)url {
     
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+        url = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
         [request setHTTPMethod:@"GET"];
         [request setURL:[NSURL URLWithString:url]];
 

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CoreData
+
 
 class DetailViewController: UIViewController {
     
@@ -18,8 +18,13 @@ class DetailViewController: UIViewController {
     @IBOutlet var imgView: UIImageView!
     
     var movie: Movie?
+    var interactor: DetailInteractor!
     
     override func viewDidLoad() {
+        interactor = DetailInteractor()
+        let presenter = DetailPresenter()
+        presenter.viewController = self
+        interactor.presenter = presenter
         self.setUI()
     }
     
@@ -36,18 +41,6 @@ class DetailViewController: UIViewController {
     
     @IBAction func click() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "MovieDB", in: context)
-        let newMovie = NSManagedObject(entity: entity!, insertInto: context)
-        newMovie.setValue(movie?.title, forKey: "title")
-        newMovie.setValue(movie?.type, forKey: "type")
-        newMovie.setValue(movie?.imdbID, forKey: "imdbID")
-        newMovie.setValue(movie?.poster, forKey: "poster")
-        newMovie.setValue(movie?.year, forKey: "year")        
-        do {
-           try context.save()
-          } catch {
-           print("Failed saving")
-        }
+        interactor.saveFavorite(movie: movie ?? Movie(), appDelegate: appDelegate)
     }
 }
